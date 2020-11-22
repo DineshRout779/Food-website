@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +10,7 @@
 
 body {
   line-height: 1.6;
+  height: 200vh;
 }
 
 a {
@@ -67,7 +71,7 @@ p {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 1rem 5%;
+  padding: 0.5rem 5%;
   z-index: 100;
   display: flex;
   justify-content: space-between;
@@ -75,10 +79,20 @@ p {
   transition: 0.5s;
 }
 
+.header.sticky {
+  background: #fff;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  padding: 0 5%;
+}
+
 .header .logo {
   color: #fff;
   font-weight: 600;
   font-size: 2rem;
+}
+
+.header.sticky .logo {
+  color: #333333;
 }
 
 .header .logo span {
@@ -95,4 +109,12 @@ nav a {
   color: #fff;
   margin-left: 1.5rem;
   font-weight: 300;
+}
+
+.header.sticky nav a {
+  color: #333;
+}
+
+nav a:hover {
+  color: #eb4545;
 }
