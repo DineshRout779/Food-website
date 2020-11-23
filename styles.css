@@ -134,6 +134,27 @@ header.sticky .header nav a:hover {
   color: var(--btn-color);
 }
 
+.menu__toggle {
+  width: 30px;
+  height: 27px;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+header.sticky .menu__toggle .bar {
+  background-color: #333;
+}
+
+.bar {
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  margin: 3px 0;
+}
+
 section {
   padding: 6rem 0;
 }
@@ -221,7 +242,7 @@ section {
 }
 
 .testimonials {
-  background: url("./images/bg2.jpg");
+  background: url("./images/bg2.jpg") no-repeat center center/cover;
 }
 
 .testimonials .row {
@@ -311,4 +332,92 @@ section {
 footer {
   text-align: center;
   padding: 1rem 0;
+}
+
+footer a {
+  font-weight: bold;
+}
+
+@media (max-width: 800px) {
+  .menu__toggle {
+    display: flex;
+  }
+  nav {
+    position: absolute;
+    top: 67px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+  }
+  nav.open {
+    display: flex;
+  }
+  nav a {
+    color: #333;
+    margin: 0.5rem 0;
+    font-weight: 600;
+  }
+  .banner h2 {
+    font-size: 3.5rem;
+  }
+  .banner p {
+    font-size: 0.8rem;
+  }
+  section {
+    padding: 4rem 0;
+  }
+  .about {
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+  }
+  .menu {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+  }
+  .menu .title {
+    grid-column: 1/3;
+  }
+  .experts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .experts .title {
+    grid-column: 1/3;
+  }
+  .testimonials .row {
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+  }
+  .testimonials .title {
+    grid-column: 1/1;
+  }
+  .contact {
+    background: #fff;
+  }
+  .contact .row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  section {
+    padding: 3rem 0;
+  }
+  .menu {
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+  }
+  .menu .title {
+    grid-column: 1/1;
+  }
+  .experts {
+    grid-template-columns: 1fr;
+  }
+  .experts .title {
+    grid-column: 1/1;
+  }
 }
