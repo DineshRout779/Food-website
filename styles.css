@@ -307,3 +307,8 @@ section {
   margin: 1rem 0;
   width: 100%;
 }
+
+footer {
+  text-align: center;
+  padding: 1rem 0;
+}
