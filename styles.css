@@ -212,3 +212,50 @@ section {
 .experts .col__text {
   text-align: center;
 }
+
+.testimonials {
+  background: url("./images/bg2.jpg");
+}
+
+.testimonials .row {
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+}
+
+/* .testimonials .container {
+  max-width: 600px;
+} */
+
+.testimonials .col:not(.title) {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.testimonials .col:not(.title) p {
+  color: #333;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.testimonials .title {
+  grid-column: 1/4;
+  text-align: center;
+}
+
+.testimonials .image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.text-white,
+.text-white p {
+  color: #fff;
+}
