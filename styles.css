@@ -143,12 +143,16 @@ section {
   grid-gap: 3rem;
 }
 
+.about .title p {
+  font-size: 1rem;
+}
+
 .row .col h2 {
   font-weight: 400;
   font-size: 2.2rem;
 }
 
-.row .col h2::first-letter {
+.title h2::first-letter {
   color: #eb4545;
   font-weight: bold;
   font-size: 3.2rem;
@@ -188,4 +192,23 @@ section {
 
 .col .col__text {
   color: #333;
+}
+
+.experts {
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+}
+
+.experts .title {
+  grid-column: 1/5;
+  text-align: center;
+}
+
+.experts .col:not(.title) {
+  padding: 1rem;
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.08);
+}
+
+.experts .col__text {
+  text-align: center;
 }
