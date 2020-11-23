@@ -11,6 +11,7 @@ html {
 body {
   line-height: 1.6;
   height: 200vh;
+  background-color: rgb(252, 247, 247);
 }
 
 a {
@@ -21,6 +22,10 @@ a {
 p {
   font-weight: 300;
   color: #111;
+}
+
+img {
+  width: 100%;
 }
 
 .container {
@@ -66,33 +71,26 @@ p {
   letter-spacing: 6px;
 }
 
-.header {
+header {
+  width: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  padding: 0.5rem 5%;
   z-index: 100;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  padding: 0.5rem 0;
   transition: 0.5s;
 }
 
-.header.sticky {
-  background: #fff;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-  padding: 0 5%;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header .logo {
   color: #fff;
   font-weight: 600;
   font-size: 2rem;
-}
-
-.header.sticky .logo {
-  color: #333333;
 }
 
 .header .logo span {
@@ -110,11 +108,84 @@ nav a {
   margin-left: 1.5rem;
   font-weight: 300;
 }
+header.sticky .header .logo {
+  color: #333333;
+}
+header.sticky {
+  background: #fff;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
 
-.header.sticky nav a {
+header.sticky .header nav a {
   color: #333;
 }
 
 nav a:hover {
   color: #eb4545;
+}
+
+header.sticky .header nav a:hover {
+  color: #eb4545;
+}
+
+section {
+  padding: 6rem 0;
+}
+
+.row {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.about {
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 3rem;
+}
+
+.row .col h2 {
+  font-weight: 400;
+  font-size: 2.2rem;
+}
+
+.row .col h2::first-letter {
+  color: #eb4545;
+  font-weight: bold;
+  font-size: 3.2rem;
+}
+
+.row .col img {
+  object-fit: contain;
+}
+
+.menu {
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+}
+
+.menu .title {
+  grid-column: 1/4;
+  text-align: center;
+}
+
+.menu .col:not(.title) {
+  padding: 1rem;
+  border-radius: 0.6rem;
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.08);
+}
+
+.col__imgBox {
+  overflow: hidden;
+}
+
+.col__imgBox img {
+  transition: 0.3s ease;
+}
+
+.col__imgBox:hover img {
+  transform: scale(1.1);
+}
+
+.col .col__text {
+  color: #333;
 }
